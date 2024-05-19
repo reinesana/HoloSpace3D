@@ -75,14 +75,11 @@ torch::Tensor Model::forward(Camera& cam, int step){
     torch::Tensor colors =  torch::cat({featuresDc.index({Slice(), None, Slice()}), featuresRest}, 1);
 
     torch::Tensor conics;
-    torch::Tensor depths; // GPU-only
-    torch::Tensor numTilesHit; // GPU-only
-    torch::Tensor cov2d; // CPU-only
-    torch::Tensor camDepths; // CPU-only
+    torch::Tensor cov2d;
+    torch::Tensor camDepths; 
     torch::Tensor rgb;
 
-    if (device == torch::kCPU){
-        auto p = ProjectGaussiansCPU::apply(means, 
+    auto p = ProjectGaussiansCPU::apply(means, 
                                 torch::exp(scales), 
                                 1, 
                                 quats / quats.norm(2, {-1}, true), 
@@ -99,41 +96,11 @@ torch::Tensor Model::forward(Camera& cam, int step){
         conics = p[2];
         cov2d = p[3];
         camDepths = p[4];
-    }else{
-        #if defined(USE_HIP) || defined(USE_CUDA) || defined(USE_MPS)
-
-        TileBounds tileBounds = std::make_tuple((width + BLOCK_X - 1) / BLOCK_X,
-                        (height + BLOCK_Y - 1) / BLOCK_Y,
-                        1);
-        auto p = ProjectGaussians::apply(means, 
-                        torch::exp(scales), 
-                        1, 
-                        quats / quats.norm(2, {-1}, true), 
-                        viewMat, 
-                        torch::matmul(projMat, viewMat),
-                        fx, 
-                        fy,
-                        cx,
-                        cy,
-                        height,
-                        width,
-                        tileBounds);
-
-        xys = p[0];
-        depths = p[1];
-        radii = p[2];
-        conics = p[3];
-        numTilesHit = p[4];
-        #else
-            throw std::runtime_error("GPU support not built, use --cpu");
-        #endif
-    }
     
 
     if (radii.sum().item<float>() == 0.0f)
         return backgroundColor.repeat({height, width, 1});
 
-    // TODO: is this needed?
     xys.retain_grad();
 
     torch::Tensor viewDirs = means.detach() - T.transpose(0, 1).to(device);
@@ -144,15 +111,12 @@ torch::Tensor Model::forward(Camera& cam, int step){
     if (device == torch::kCPU){
         rgbs = SphericalHarmonicsCPU::apply(degreesToUse, viewDirs, colors);
     }else{
-        #if defined(USE_HIP) || defined(USE_CUDA) || defined(USE_MPS)
         rgbs = SphericalHarmonics::apply(degreesToUse, viewDirs, colors);
-        #endif
     }
     
     rgbs = torch::clamp_min(rgbs + 0.5f, 0.0f);
 
-    if (device == torch::kCPU){
-        rgb = RasterizeGaussiansCPU::apply(
+    rgb = RasterizeGaussiansCPU::apply(
                 xys,
                 radii,
                 conics,
@@ -163,21 +127,6 @@ torch::Tensor Model::forward(Camera& cam, int step){
                 height,
                 width,
                 backgroundColor);
-    }else{  
-        #if defined(USE_HIP) || defined(USE_CUDA) || defined(USE_MPS)
-        rgb = RasterizeGaussians::apply(
-                xys,
-                depths,
-                radii,
-                conics,
-                numTilesHit,
-                rgbs,
-                torch::sigmoid(opacities),
-                height,
-                width,
-                backgroundColor);
-        #endif
-    }
 
     rgb = torch::clamp_max(rgb, 1.0f);
 
@@ -389,8 +338,8 @@ void Model::afterTrain(int step){
             }
 
             if (step > refineEvery * resetAlphaEvery){
-                const float cullScaleThresh = 0.5f; // cull huge gaussians
-                const float cullScreenSize = 0.15f; // % of screen space
+                const float cullScaleThresh = 0.5f;
+                const float cullScreenSize = 0.15f;
                 torch::Tensor huge = std::get<0>(torch::exp(scales).max(-1)) > cullScaleThresh;
                 if (step < stopScreenSizeAt){
                     huge |= max2DSize > cullScreenSize;
@@ -422,7 +371,6 @@ void Model::afterTrain(int step){
             float resetValue = cullAlphaThresh * 2.0f;
             opacities = torch::clamp_max(opacities, torch::logit(torch::tensor(resetValue)).item<float>());
 
-            // Reset optimizer
             torch::Tensor param = opacitiesOpt->param_groups()[0].params()[0];
             #if TORCH_VERSION_MAJOR == 2 && TORCH_VERSION_MINOR > 1
                 auto pId = param.unsafeGetTensorImpl();
@@ -435,18 +383,9 @@ void Model::afterTrain(int step){
             std::cout << "Alpha reset" << std::endl;
         }
 
-        // Clear
         xysGradNorm = torch::Tensor();
         visCounts = torch::Tensor();
         max2DSize = torch::Tensor();
-
-        if (device != torch::kCPU){
-            #ifdef USE_HIP
-                    c10::hip::HIPCachingAllocator::emptyCache();
-            #elif defined(USE_CUDA)
-                    c10::cuda::CUDACachingAllocator::emptyCache();
-            #endif
-        }
     }
 }
 
@@ -478,7 +417,7 @@ void Model::savePly(const std::string &filename){
         o << "property float f_dc_" << i << std::endl;
     }
 
-    // Match Inria's version
+
     torch::Tensor featuresRestCpu = featuresRest.cpu().transpose(1, 2).reshape({numPoints, -1});
     for (int i = 0; i < featuresRestCpu.size(1); i++){
         o << "property float f_rest_" << i << std::endl;
