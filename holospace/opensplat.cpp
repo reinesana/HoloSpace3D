@@ -12,7 +12,7 @@ using namespace torch::indexing;
 int main(int argc, char *argv[]){
     cxxopts::Options options("holospace", "3D Gaussian Splatting for MAC - " APP_VERSION);
     options.add_options()
-        ("i,input", "Path to nerfstudio project", cxxopts::value<std::string>())
+        ("i,input", "Path to project", cxxopts::value<std::string>())
         ("o,output", "Path where to save output scene", cxxopts::value<std::string>()->default_value("splat.ply"))
         ("s,save-every", "Save output scene every these many steps (set to -1 to disable)", cxxopts::value<int>()->default_value("-1"))
         ("val", "Withhold a camera shot for validating the scene loss")
