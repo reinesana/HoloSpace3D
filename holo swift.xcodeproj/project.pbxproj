@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BD21F532BF980A200000550 /* holo_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F522BF980A200000550 /* holo_swiftApp.swift */; };
+		3BD21F552BF980A200000550 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F542BF980A200000550 /* ContentView.swift */; };
+		3BD21F572BF980A300000550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD21F562BF980A300000550 /* Assets.xcassets */; };
+		3BD21F5A2BF980A300000550 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD21F592BF980A300000550 /* Preview Assets.xcassets */; };
+		3BD21F6E2BF9821900000550 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F6D2BF9821900000550 /* ExploreView.swift */; };
+		3BD21F732BF983F500000550 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F722BF983F500000550 /* PostView.swift */; };
+		3BD21F752BF9B8E800000550 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F742BF9B8E800000550 /* ProfileView.swift */; };
+		3BD21F772BF9BB9B00000550 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F762BF9BB9B00000550 /* MainTabView.swift */; };
+		3BD21F822BF9BF3100000550 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F812BF9BF3100000550 /* Post.swift */; };
+		3BD21F842BF9C02000000550 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F832BF9C02000000550 /* DeveloperPreview.swift */; };
+		3BD21F8C2BF9C3B300000550 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F8B2BF9C3B300000550 /* ExploreViewModel.swift */; };
+		3BD21F8E2BF9C46700000550 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F8D2BF9C46700000550 /* ExploreService.swift */; };
+		3BD21F902BF9D15700000550 /* PostImageCourouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F8F2BF9D15700000550 /* PostImageCourouselView.swift */; };
+		3BD21F932BF9DE4D00000550 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F922BF9DE4D00000550 /* UserView.swift */; };
+		3BD21F972BF9E06F00000550 /* CurrentUserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F962BF9E06F00000550 /* CurrentUserProfileHeaderView.swift */; };
+		3BD21FA22BFA183100000550 /* AddStoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21FA12BFA183100000550 /* AddStoryCard.swift */; };
+		3BD21FA42BFA18D500000550 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21FA32BFA18D500000550 /* StoryCard.swift */; };
+		3BD21FA62BFA1A3600000550 /* StoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21FA52BFA1A3600000550 /* StoryListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BD21F4F2BF980A200000550 /* holo swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "holo swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD21F522BF980A200000550 /* holo_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = holo_swiftApp.swift; sourceTree = "<group>"; };
+		3BD21F542BF980A200000550 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3BD21F562BF980A300000550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BD21F592BF980A300000550 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BD21F6D2BF9821900000550 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		3BD21F722BF983F500000550 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		3BD21F742BF9B8E800000550 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3BD21F762BF9BB9B00000550 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3BD21F812BF9BF3100000550 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3BD21F832BF9C02000000550 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
+		3BD21F8B2BF9C3B300000550 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		3BD21F8D2BF9C46700000550 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
+		3BD21F8F2BF9D15700000550 /* PostImageCourouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCourouselView.swift; sourceTree = "<group>"; };
+		3BD21F922BF9DE4D00000550 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		3BD21F962BF9E06F00000550 /* CurrentUserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileHeaderView.swift; sourceTree = "<group>"; };
+		3BD21FA12BFA183100000550 /* AddStoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryCard.swift; sourceTree = "<group>"; };
+		3BD21FA32BFA18D500000550 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
+		3BD21FA52BFA1A3600000550 /* StoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BD21F4C2BF980A200000550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BD21F462BF980A200000550 = {
+			isa = PBXGroup;
+			children = (
+				3BD21F512BF980A200000550 /* holo swift */,
+				3BD21F502BF980A200000550 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BD21F502BF980A200000550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F4F2BF980A200000550 /* holo swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BD21F512BF980A200000550 /* holo swift */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F9A2BFA07E000000550 /* Camera */,
+				3BD21F912BF9DE1000000550 /* User */,
+				3BD21F692BF9816D00000550 /* MapView */,
+				3BD21F632BF980E500000550 /* App */,
+				3BD21F6B2BF9818600000550 /* TabBar */,
+				3BD21F6A2BF9817400000550 /* Profile */,
+				3BD21F672BF9816100000550 /* Explore */,
+				3BD21F702BF9838F00000550 /* Posts */,
+				3BD21F642BF980FD00000550 /* Extensions */,
+				3BD21F652BF9810500000550 /* Models */,
+				3BD21F662BF9811400000550 /* Utils */,
+				3BD21F562BF980A300000550 /* Assets.xcassets */,
+				3BD21F582BF980A300000550 /* Preview Content */,
+			);
+			path = "holo swift";
+			sourceTree = "<group>";
+		};
+		3BD21F582BF980A300000550 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F592BF980A300000550 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BD21F632BF980E500000550 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F522BF980A200000550 /* holo_swiftApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3BD21F642BF980FD00000550 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F832BF9C02000000550 /* DeveloperPreview.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BD21F652BF9810500000550 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BD21F662BF9811400000550 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3BD21F672BF9816100000550 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F8A2BF9C39800000550 /* ViewModel */,
+				3BD21F892BF9C39300000550 /* View */,
+				3BD21F882BF9C38E00000550 /* Service */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		3BD21F692BF9816D00000550 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		3BD21F6A2BF9817400000550 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F742BF9B8E800000550 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3BD21F6B2BF9818600000550 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F762BF9BB9B00000550 /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3BD21F702BF9838F00000550 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F7F2BF9BEF800000550 /* View */,
+				3BD21F7E2BF9BEF300000550 /* Models */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		3BD21F7E2BF9BEF300000550 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F812BF9BF3100000550 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BD21F7F2BF9BEF800000550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F722BF983F500000550 /* PostView.swift */,
+				3BD21F8F2BF9D15700000550 /* PostImageCourouselView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BD21F882BF9C38E00000550 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F8D2BF9C46700000550 /* ExploreService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3BD21F892BF9C39300000550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21FA72BFA1E8D00000550 /* Storycards */,
+				3BD21F6D2BF9821900000550 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BD21F8A2BF9C39800000550 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F8B2BF9C3B300000550 /* ExploreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3BD21F912BF9DE1000000550 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F922BF9DE4D00000550 /* UserView.swift */,
+				3BD21F962BF9E06F00000550 /* CurrentUserProfileHeaderView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3BD21F9A2BFA07E000000550 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21F542BF980A200000550 /* ContentView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3BD21FA72BFA1E8D00000550 /* Storycards */ = {
+			isa = PBXGroup;
+			children = (
+				3BD21FA52BFA1A3600000550 /* StoryListView.swift */,
+				3BD21FA12BFA183100000550 /* AddStoryCard.swift */,
+				3BD21FA32BFA18D500000550 /* StoryCard.swift */,
+			);
+			path = Storycards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BD21F4E2BF980A200000550 /* holo swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD21F5D2BF980A300000550 /* Build configuration list for PBXNativeTarget "holo swift" */;
+			buildPhases = (
+				3BD21F4B2BF980A200000550 /* Sources */,
+				3BD21F4C2BF980A200000550 /* Frameworks */,
+				3BD21F4D2BF980A200000550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "holo swift";
+			productName = "holo swift";
+			productReference = 3BD21F4F2BF980A200000550 /* holo swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BD21F472BF980A200000550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					3BD21F4E2BF980A200000550 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 3BD21F4A2BF980A200000550 /* Build configuration list for PBXProject "holo swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BD21F462BF980A200000550;
+			productRefGroup = 3BD21F502BF980A200000550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BD21F4E2BF980A200000550 /* holo swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BD21F4D2BF980A200000550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD21F5A2BF980A300000550 /* Preview Assets.xcassets in Resources */,
+				3BD21F572BF980A300000550 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BD21F4B2BF980A200000550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD21F972BF9E06F00000550 /* CurrentUserProfileHeaderView.swift in Sources */,
+				3BD21F552BF980A200000550 /* ContentView.swift in Sources */,
+				3BD21F842BF9C02000000550 /* DeveloperPreview.swift in Sources */,
+				3BD21F6E2BF9821900000550 /* ExploreView.swift in Sources */,
+				3BD21F752BF9B8E800000550 /* ProfileView.swift in Sources */,
+				3BD21FA22BFA183100000550 /* AddStoryCard.swift in Sources */,
+				3BD21FA62BFA1A3600000550 /* StoryListView.swift in Sources */,
+				3BD21F732BF983F500000550 /* PostView.swift in Sources */,
+				3BD21F8E2BF9C46700000550 /* ExploreService.swift in Sources */,
+				3BD21F532BF980A200000550 /* holo_swiftApp.swift in Sources */,
+				3BD21F932BF9DE4D00000550 /* UserView.swift in Sources */,
+				3BD21FA42BFA18D500000550 /* StoryCard.swift in Sources */,
+				3BD21F8C2BF9C3B300000550 /* ExploreViewModel.swift in Sources */,
+				3BD21F822BF9BF3100000550 /* Post.swift in Sources */,
+				3BD21F902BF9D15700000550 /* PostImageCourouselView.swift in Sources */,
+				3BD21F772BF9BB9B00000550 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3BD21F5B2BF980A300000550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BD21F5C2BF980A300000550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BD21F5E2BF980A300000550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"holo swift/Preview Content\"";
+				DEVELOPMENT_TEAM = 7YZMT4QAKQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow Miicrophone";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "holo-ios.holo-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BD21F5F2BF980A300000550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"holo swift/Preview Content\"";
+				DEVELOPMENT_TEAM = 7YZMT4QAKQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow Miicrophone";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "holo-ios.holo-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BD21F4A2BF980A200000550 /* Build configuration list for PBXProject "holo swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD21F5B2BF980A300000550 /* Debug */,
+				3BD21F5C2BF980A300000550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD21F5D2BF980A300000550 /* Build configuration list for PBXNativeTarget "holo swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD21F5E2BF980A300000550 /* Debug */,
+				3BD21F5F2BF980A300000550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BD21F472BF980A200000550 /* Project object */;
+}

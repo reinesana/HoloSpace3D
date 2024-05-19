@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "The 12 best things to do & photo spots in Seoul - with map - voyagefox.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
