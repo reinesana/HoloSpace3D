@@ -1,20 +1,10 @@
-#
-# Copyright (C) 2023, Inria
-# GRAPHDECO research group, https://team.inria.fr/graphdeco
-# All rights reserved.
-#
-# This software is free for non-commercial, research and evaluation use
-# under the terms of the LICENSE.md file.
-#
-# For inquiries contact  george.drettakis@inria.fr
-#
+# github inspiration link: https://github.com/graphdeco-inria/gaussian-splatting/tree/main
 
 import os
 import logging
 from argparse import ArgumentParser
 import shutil
 
-# This Python script is based on the shell converter script provided in the MipNerF 360 repository.
 parser = ArgumentParser("Colmap converter")
 parser.add_argument("--no_gpu", action='store_true')
 parser.add_argument("--skip_matching", action='store_true')
@@ -31,7 +21,6 @@ use_gpu = 1 if not args.no_gpu else 0
 if not args.skip_matching:
     os.makedirs(args.source_path + "/distorted/sparse", exist_ok=True)
 
-    ## Feature extraction
     feat_extracton_cmd = colmap_command + " feature_extractor "\
         "--database_path " + args.source_path + "/distorted/database.db \
         --image_path " + args.source_path + "/input \
@@ -43,7 +32,6 @@ if not args.skip_matching:
         logging.error(f"Feature extraction failed with code {exit_code}. Exiting.")
         exit(exit_code)
 
-    ## Feature matching
     feat_matching_cmd = colmap_command + " exhaustive_matcher \
         --database_path " + args.source_path + "/distorted/database.db \
         --SiftMatching.use_gpu " + str(use_gpu)
@@ -52,9 +40,6 @@ if not args.skip_matching:
         logging.error(f"Feature matching failed with code {exit_code}. Exiting.")
         exit(exit_code)
 
-    ### Bundle adjustment
-    # The default Mapper tolerance is unnecessarily large,
-    # decreasing it speeds up bundle adjustment steps.
     mapper_cmd = (colmap_command + " mapper \
         --database_path " + args.source_path + "/distorted/database.db \
         --image_path "  + args.source_path + "/input \
@@ -65,8 +50,6 @@ if not args.skip_matching:
         logging.error(f"Mapper failed with code {exit_code}. Exiting.")
         exit(exit_code)
 
-### Image undistortion
-## We need to undistort our images into ideal pinhole intrinsics.
 img_undist_cmd = (colmap_command + " image_undistorter \
     --image_path " + args.source_path + "/input \
     --input_path " + args.source_path + "/distorted/sparse/0 \
@@ -79,7 +62,6 @@ if exit_code != 0:
 
 files = os.listdir(args.source_path + "/sparse")
 os.makedirs(args.source_path + "/sparse/0", exist_ok=True)
-# Copy each file from the source directory to the destination directory
 for file in files:
     if file == '0':
         continue
@@ -89,14 +71,10 @@ for file in files:
 
 if(args.resize):
     print("Copying and resizing...")
-
-    # Resize images.
     os.makedirs(args.source_path + "/images_2", exist_ok=True)
     os.makedirs(args.source_path + "/images_4", exist_ok=True)
     os.makedirs(args.source_path + "/images_8", exist_ok=True)
-    # Get the list of files in the source directory
     files = os.listdir(args.source_path + "/images")
-    # Copy each file from the source directory to the destination directory
     for file in files:
         source_file = os.path.join(args.source_path, "images", file)
 
