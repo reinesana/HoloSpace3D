@@ -14,22 +14,16 @@ std::tuple<torch::Tensor,
     auto t = map_gaussian_to_intersects_tensor(numPoints, numIntersects, 
                                         xys, depths, radii, cumTilesHit, tileBounds);
     
-    // unique IDs for each gaussian in the form (tile | depth id)
     torch::Tensor isectIds = std::get<0>(t);
-
-    // Tensor that maps isect_ids back to cumHitTiles
     torch::Tensor gaussianIds = std::get<1>(t);
-    
+        
     auto sorted = torch::sort(isectIds);
 
-    // sorted unique IDs for each gaussian in the form (tile | depth id)
     torch::Tensor isectIdsSorted = std::get<0>(sorted);
     torch::Tensor sortedIndices = std::get<1>(sorted);
 
-    // sorted Tensor that maps isect_ids back to cumHitTiles
     torch::Tensor gaussianIdsSorted = torch::gather(gaussianIds, 0, sortedIndices);
 
-    // range of gaussians hit per tile
     torch::Tensor tileBins = get_tile_bin_edges_tensor(numIntersects, isectIdsSorted);
     return std::make_tuple(isectIds, gaussianIds, isectIdsSorted, gaussianIdsSorted, tileBins);
 }
@@ -77,7 +71,6 @@ torch::Tensor RasterizeGaussians::forward(AutogradContext *ctx,
 
     torch::Tensor finalTs = std::get<1>(t);
 
-    // Map of tile bin IDs
     torch::Tensor finalIdx = std::get<2>(t);
 
     ctx->saved_data["imgWidth"] = imgWidth;
@@ -125,15 +118,15 @@ tensor_list RasterizeGaussians::backward(AutogradContext *ctx, tensor_list grad_
     torch::Tensor none;
 
     return { v_xy,
-            none, // depths
-            none, // radii
+            none,
+            none,
             v_conic,
-            none, // numTilesHit
+            none,
             v_colors,
             v_opacity,
-            none, // imgHeight
-            none, // imgWidth
-            none // background
+            none, 
+            none, 
+            none
     };
 }
 
