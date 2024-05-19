@@ -209,15 +209,15 @@ tensor_list RasterizeGaussiansCPU::backward(AutogradContext *ctx, tensor_list gr
     torch::Tensor none;
 
     return { v_xy,
-            none, // radii
+            none,
             v_conic,
             v_colors,
             v_opacity,
-            none, // cov2d
-            none, // camDepths
-            none, // imgHeight
-            none, // imgWidth
-            none // background
+            none,
+            none,
+            none, 
+            none, 
+            none
     };
 }
 
