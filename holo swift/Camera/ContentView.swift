@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  holo swift
-//
-//  Created by Shana Kesia Nursoo on 2024-05-19.
-//
-
 import SwiftUI
 import AVFoundation
 
@@ -78,12 +71,37 @@ struct CameraView: View {
                 }
                 .frame(height: 75)
             }
+            
+            // Add AVCaptureVideoPreviewLayer
+            CameraPreview(session: camera.session)
+                .edgesIgnoringSafeArea(.all)
         }
         .onAppear {
             camera.checkPermissions()
         }
         .alert(isPresented: $camera.alert) {
             Alert(title: Text("Permission Denied"), message: Text("Please enable camera access in settings."), dismissButton: .default(Text("OK")))
+        }
+    }
+}
+
+struct CameraPreview: UIViewRepresentable {
+    var session: AVCaptureSession
+    
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        
+        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.frame = view.layer.bounds
+        view.layer.addSublayer(previewLayer)
+        
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {
+        if let layer = uiView.layer.sublayers?.first as? AVCaptureVideoPreviewLayer {
+            layer.frame = uiView.layer.bounds
         }
     }
 }
@@ -165,3 +183,4 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         }
     }
 }
+

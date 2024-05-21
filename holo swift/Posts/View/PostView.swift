@@ -8,7 +8,16 @@ struct PostView: View {
         VStack(spacing: 16) {
             
             // images
-            PostImageCourouselView(post: post)
+            Spacer()
+            
+            
+            UserHeading()
+                .frame(alignment: .leading)
+                .offset(x: -150)
+               
+            
+            
+            PostImageCarouselView(post: post)
                 .frame(height: 490)
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .tabViewStyle(.page)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoryListView: View {
     
-    let userImages = ["prof-1", "prof-2", "prof-3", "prof-6", "prof-4"]
+    let userImages = ["prof-1", "prof-2", "prof-3", "post-5", "prof-4"]
     
     var body: some View {
         ScrollView (.horizontal, showsIndicators: false) {
@@ -20,7 +20,8 @@ struct StoryListView: View {
                 }
             }
         }
-        .offset(x: 15)
+        .offset(x: 20)
+        .padding(.top, 20)
     }
 }
 

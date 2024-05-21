@@ -18,16 +18,16 @@ struct UserView: View {
                     VStack(spacing: 4) {
                         // header view
                         CurrentUserProfileHeaderView()
-                            .padding(.top, 20) // Adjust the padding to move the header view higher
+                          
                         
                         // account info
                         VStack(alignment: .center, spacing: 2) {
-                            Text("@oogway")
+                            Text("@sherriee")
                                 .foregroundColor(.gray)
                                 .fontWeight(.light)
                             
                             HStack(spacing: 2) {
-                                Text("the one and only")
+                                Text("video producer / content creator")
                                     .foregroundStyle(.gray)
                             }
                         }
@@ -58,8 +58,10 @@ struct UserView: View {
                 }
                 .background(
                     LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.5), Color.black.opacity(10.6)]), startPoint: .top, endPoint: .bottom)
+                            .ignoresSafeArea()
+                        .scaledToFill()
                         .background(
-                            Image("hero-image") // Replace "your_overlay_image" with the name of your overlay image asset
+                            Image("hero-image")
                                 .resizable()
                                 .scaledToFill()
                                 .ignoresSafeArea()

@@ -23,13 +23,13 @@ struct CurrentUserProfileHeaderView: View {
                     .foregroundStyle(.green)
                     .background {
                         Circle()
-                            .fill(.white)
+                            .fill(.clear)
                             .frame(width: 32, height: 32)
                     }
-                    .offset(x: 50, y: -40)
+                    .offset(x: 40, y: -35)
             }
             
-            Text("Master Oogway")
+            Text("sherry.mae")
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .padding(.top, 5) // Move the text closer to the image if needed

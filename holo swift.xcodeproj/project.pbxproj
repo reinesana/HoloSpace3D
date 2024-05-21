@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA049FC2BFC03E30088E4F5 /* UserHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA049FB2BFC03E30088E4F5 /* UserHeading.swift */; };
 		3BD21F532BF980A200000550 /* holo_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F522BF980A200000550 /* holo_swiftApp.swift */; };
 		3BD21F552BF980A200000550 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD21F542BF980A200000550 /* ContentView.swift */; };
 		3BD21F572BF980A300000550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD21F562BF980A300000550 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BA049FB2BFC03E30088E4F5 /* UserHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeading.swift; sourceTree = "<group>"; };
 		3BD21F4F2BF980A200000550 /* holo swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "holo swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD21F522BF980A200000550 /* holo_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = holo_swiftApp.swift; sourceTree = "<group>"; };
 		3BD21F542BF980A200000550 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +83,6 @@
 			children = (
 				3BD21F9A2BFA07E000000550 /* Camera */,
 				3BD21F912BF9DE1000000550 /* User */,
-				3BD21F692BF9816D00000550 /* MapView */,
 				3BD21F632BF980E500000550 /* App */,
 				3BD21F6B2BF9818600000550 /* TabBar */,
 				3BD21F6A2BF9817400000550 /* Profile */,
@@ -144,13 +145,6 @@
 			path = Explore;
 			sourceTree = "<group>";
 		};
-		3BD21F692BF9816D00000550 /* MapView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MapView;
-			sourceTree = "<group>";
-		};
 		3BD21F6A2BF9817400000550 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +183,7 @@
 			children = (
 				3BD21F722BF983F500000550 /* PostView.swift */,
 				3BD21F8F2BF9D15700000550 /* PostImageCourouselView.swift */,
+				3BA049FB2BFC03E30088E4F5 /* UserHeading.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +321,7 @@
 				3BD21F8E2BF9C46700000550 /* ExploreService.swift in Sources */,
 				3BD21F532BF980A200000550 /* holo_swiftApp.swift in Sources */,
 				3BD21F932BF9DE4D00000550 /* UserView.swift in Sources */,
+				3BA049FC2BFC03E30088E4F5 /* UserHeading.swift in Sources */,
 				3BD21FA42BFA18D500000550 /* StoryCard.swift in Sources */,
 				3BD21F8C2BF9C3B300000550 /* ExploreViewModel.swift in Sources */,
 				3BD21F822BF9BF3100000550 /* Post.swift in Sources */,
