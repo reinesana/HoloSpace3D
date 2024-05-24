@@ -1,4 +1,4 @@
-### Holospace 3D 🌐 ###
+# Holospace 3D 🌐 
 
 ### Demo:
 ![](")![terryfox](https://github.com/reinesana/HoloSpace3D/assets/153279125/22ba5223-8dd5-4f52-8b4b-847c1384137d)
