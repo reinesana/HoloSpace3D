@@ -5,6 +5,7 @@
 
 
 <br>
+
 ## Purpose
 HoloSpace is social media platform where users can engage, post and interact with hyper-realistic 3D experiences of their friends and family with the click of a simple, short 5 second video. The platform uses the latest research in AI-powered rendering to create photorealistic scenes whilst also connecting people through experiences. This platform leverages social media to new lengths, allowing integration with Apple Vision Pro to connect and share experiences like never before.
 
